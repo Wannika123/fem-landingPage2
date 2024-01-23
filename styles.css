@@ -1,0 +1,245 @@
+:root {
+    --Red: hsl(0, 100%, 68%);
+    --Very-Dark-Blue: hsl(230, 29%, 20%);
+    --Dark-Grayish-Blue: hsl(230, 11%, 40%);
+    --Grayish-Blue: hsl(231, 7%, 65%);
+    --Light-Grayish-Blue: hsl(207, 33%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.bg-decoration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--Light-Grayish-Blue);
+    width: 50vw;
+    height: 50vh;
+    border-bottom-left-radius: 30px;
+    z-index: -3;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8vh 8vw;
+}
+
+.menu-bar {
+    list-style: none;
+    width: 40%;
+    max-width: 25rem;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link {
+    color: var(--Dark-Grayish-Blue);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.login {
+    color: var(--Grayish-Blue);
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 2px solid var(--Grayish-Blue);
+    background-color: var(--Grayish-Blue);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+#menu-bar-button {
+    display: none;
+    border: none;
+    width: 25px;
+    height: 25px;
+    background-image: url(./images/icon-hamburger.svg);
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 41rem) {
+    .menu-bar {
+        display: block;
+        width: 80%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 110px;
+        background-color: white;
+        z-index: 3;
+        padding: 0 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px 3px hsl(0, 0%, 90%);
+        visibility: hidden;
+    }
+    li {
+        text-align: center;
+        margin: 1.5rem;
+    }
+    hr {
+        width: unset;
+        height: unset;
+        border-radius: unset;
+        background-color: unset;
+        border: 0.5px solid var(--Light-Grayish-Blue);
+    }
+    #menu-bar-button {
+        display: block;
+    }
+}
+
+main {
+    display: flex;
+    padding-top: 30px;
+}
+
+#content {
+    width: 50%;
+    padding: 2rem 8vw;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.new {
+    color: white;
+    background-color: var(--Very-Dark-Blue);
+    padding: 5px 8px;
+    margin-right: 0.75rem;
+    border-radius: 14px;
+    font-weight: 700;
+}
+
+.intro > p {
+    color: var(--Grayish-Blue);
+    letter-spacing: 4px;
+}
+
+h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: var(--Very-Dark-Blue);
+    margin-bottom: 1rem;
+}
+
+.description-container {
+    width: 60%;
+}
+
+.description-container > p {
+    color: var(--Dark-Grayish-Blue);
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.125rem;
+}
+
+.button-section {
+    margin-top: 3rem;
+}
+
+.button-section > button {
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--Red);
+    border: none;
+    padding: 1rem 1.25rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+    border-radius: 8px;
+}
+
+.button-section > button:hover {
+    background-color: hsl(0, 86%, 72%);
+}
+
+.after-button {
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    color: var(--Grayish-Blue);
+    margin-left: 1rem;
+    letter-spacing: 3px;
+}
+
+main > img {
+    width: 50%;
+    margin-left: 1.5rem;
+    transform-origin: 0% 0%;
+    transform: scaleX(1.3);
+    overflow: hidden;
+}
+
+@media (max-width: 41rem) {
+    main {
+        flex-direction: column-reverse;
+        padding-top: 0;
+    }
+    #content {
+        width: 100%;
+        padding-top: 8rem;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    .description-container {
+        width: 100%;
+    }
+    .button-section > button {
+        width: 48%;
+        font-size: 1rem;
+        margin-right: 8px;
+    }
+    .after-button {
+        font-size: 1rem;
+        letter-spacing: 1px;
+        margin-left: 0.1rem;
+    }
+    main > img {
+        width: 100%;
+        transform-origin: 0% 0%;
+        transform: scale(1.2);
+    }
+}
+
+footer {
+    margin-top: auto;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
