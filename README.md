@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub repo](https://github.com/Wannika123/fem-landingPage2)
-- Live Site URL: [GitHub page](https://your-live-site-url.com)
+- Live Site URL: [GitHub page](https://wannika123.github.io/fem-landingPage2/)
 
 ## My process
 
