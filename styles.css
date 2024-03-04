@@ -115,6 +115,7 @@ hr {
 main {
     display: flex;
     padding-top: 30px;
+    overflow: hidden;
 }
 
 #content {
